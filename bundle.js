@@ -62993,22 +62993,22 @@ var mat = new three__WEBPACK_IMPORTED_MODULE_1__.MeshBasicMaterial({
   color: 0xffffff
 });
 var hs1 = new three__WEBPACK_IMPORTED_MODULE_1__.Mesh(geo, mat);
-hs1.scale.set(0.05, 0.05, 0.05);
+hs1.scale.set(0.065, 0.065, 0.065);
 hs1.position.set(0.35, 0.2, 0.32);
 hs1.name = 'hot1';
 scene.add(hs1);
 var hs2 = new three__WEBPACK_IMPORTED_MODULE_1__.Mesh(geo, mat);
-hs2.scale.set(0.05, 0.05, 0.05);
+hs2.scale.set(0.065, 0.065, 0.065);
 hs2.position.set(-0.5, 0.42, 0.12);
 hs2.name = 'hot2';
 scene.add(hs2);
 var hs3 = new three__WEBPACK_IMPORTED_MODULE_1__.Mesh(geo, mat);
-hs3.scale.set(0.05, 0.05, 0.05);
+hs3.scale.set(0.065, 0.065, 0.065);
 hs3.position.set(0.7, 0.38, -0.22);
 hs3.name = 'hot3';
 scene.add(hs3);
 var hs4 = new three__WEBPACK_IMPORTED_MODULE_1__.Mesh(geo, mat);
-hs4.scale.set(0.05, 0.05, 0.05);
+hs4.scale.set(0.065, 0.065, 0.065);
 hs4.position.set(1.3, 1.4, -1.95);
 hs4.name = 'hot4';
 scene.add(hs4);
@@ -63257,12 +63257,6 @@ var model = three__WEBPACK_IMPORTED_MODULE_1__.Object3D;
 var container = document.querySelector('.scene');
 var content = document.querySelector('.main-container');
 var titulo = document.querySelector('.title');
-
-// content.addEventListener('click', function(ev){
-//     ev.stopPropagation()
-//     console.log('click');
-// })
-
 container.addEventListener('click', function (event) {
   mouse.x = event.clientX / sizes.width * 2 - 1;
   mouse.y = -(event.clientY / sizes.height * 2 - 1);
@@ -63332,6 +63326,10 @@ bClose.onclick = function () {
 if (sizes.width < 500) {
   camera.fov = 80;
   camera.updateProjectionMatrix();
+  hs1.scale.set(0.08, 0.08, 0.08);
+  hs2.scale.set(0.08, 0.08, 0.08);
+  hs3.scale.set(0.08, 0.08, 0.08);
+  hs4.scale.set(0.08, 0.08, 0.08);
 }
 var mm = gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.matchMedia();
 mm.add("(min-width: 501px) and (max-width: 921px)", function () {
