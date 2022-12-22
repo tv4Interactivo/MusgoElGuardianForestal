@@ -63008,7 +63008,7 @@ hs3.position.set(0.7, 0.38, -0.22);
 hs3.name = 'hot3';
 scene.add(hs3);
 var hs4 = new three__WEBPACK_IMPORTED_MODULE_1__.Mesh(geo, mat);
-hs4.scale.set(0.065, 0.065, 0.065);
+hs4.scale.set(0.075, 0.075, 0.075);
 hs4.position.set(1.3, 1.4, -1.95);
 hs4.name = 'hot4';
 scene.add(hs4);
@@ -63166,6 +63166,12 @@ function zoom1() {
   gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".inst", {
     opacity: 0
   });
+  gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(hs1.scale, {
+    x: 0,
+    y: 0,
+    z: 0,
+    ease: "back.in(1.4)"
+  });
 }
 function zoom2() {
   gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(camera, {
@@ -63192,6 +63198,12 @@ function zoom2() {
   });
   gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".inst", {
     opacity: 0
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(hs2.scale, {
+    x: 0,
+    y: 0,
+    z: 0,
+    ease: "back.in(1.4)"
   });
 }
 function zoom3() {
@@ -63220,6 +63232,12 @@ function zoom3() {
   gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".inst", {
     opacity: 0
   });
+  gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(hs3.scale, {
+    x: 0,
+    y: 0,
+    z: 0,
+    ease: "back.in(1.4)"
+  });
 }
 function zoom4() {
   gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(camera, {
@@ -63246,6 +63264,12 @@ function zoom4() {
   });
   gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".inst", {
     opacity: 0
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(hs4.scale, {
+    x: 0,
+    y: 0,
+    z: 0,
+    ease: "back.in(1.4)"
   });
 }
 
@@ -63322,6 +63346,34 @@ bClose.onclick = function () {
   gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".inst", {
     opacity: 1
   });
+  gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(hs1.scale, {
+    x: 0.065,
+    y: 0.065,
+    z: 0.065,
+    ease: "back.out(1.4)",
+    duration: 2
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(hs2.scale, {
+    x: 0.065,
+    y: 0.065,
+    z: 0.065,
+    ease: "back.out(1.4)",
+    duration: 2
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(hs3.scale, {
+    x: 0.065,
+    y: 0.065,
+    z: 0.065,
+    ease: "back.out(1.4)",
+    duration: 2
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(hs4.scale, {
+    x: 0.075,
+    y: 0.075,
+    z: 0.075,
+    ease: "back.out(1.4)",
+    duration: 2
+  });
 };
 if (sizes.width < 500) {
   camera.fov = 80;
@@ -63359,6 +63411,12 @@ mm.add("(min-width: 501px) and (max-width: 921px)", function () {
     gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".inst", {
       opacity: 0
     });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(hs1.scale, {
+      x: 0,
+      y: 0,
+      z: 0,
+      ease: "back.in(1.4)"
+    });
   }
   function zoom2_2() {
     gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(camera, {
@@ -63385,6 +63443,12 @@ mm.add("(min-width: 501px) and (max-width: 921px)", function () {
     });
     gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".inst", {
       opacity: 0
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(hs2.scale, {
+      x: 0,
+      y: 0,
+      z: 0,
+      ease: "back.in(1.4)"
     });
   }
   function zoom3_2() {
@@ -63413,6 +63477,12 @@ mm.add("(min-width: 501px) and (max-width: 921px)", function () {
     gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".inst", {
       opacity: 0
     });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(hs3.scale, {
+      x: 0,
+      y: 0,
+      z: 0,
+      ease: "back.in(1.4)"
+    });
   }
   function zoom4_2() {
     gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(camera, {
@@ -63439,6 +63509,12 @@ mm.add("(min-width: 501px) and (max-width: 921px)", function () {
     });
     gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".inst", {
       opacity: 0
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(hs4.scale, {
+      x: 0,
+      y: 0,
+      z: 0,
+      ease: "back.in(1.4)"
     });
   }
   container.addEventListener('click', function (event) {
@@ -63495,6 +63571,12 @@ mm.add("(max-width: 500px)", function () {
     gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".inst", {
       opacity: 0
     });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(hs1.scale, {
+      x: 0,
+      y: 0,
+      z: 0,
+      ease: "back.in(1.4)"
+    });
   }
   function zoom2_3() {
     gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(camera, {
@@ -63521,6 +63603,12 @@ mm.add("(max-width: 500px)", function () {
     });
     gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".inst", {
       opacity: 0
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(hs2.scale, {
+      x: 0,
+      y: 0,
+      z: 0,
+      ease: "back.in(1.4)"
     });
   }
   function zoom3_3() {
@@ -63549,6 +63637,12 @@ mm.add("(max-width: 500px)", function () {
     gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".inst", {
       opacity: 0
     });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(hs3.scale, {
+      x: 0,
+      y: 0,
+      z: 0,
+      ease: "back.in(1.4)"
+    });
   }
   function zoom4_3() {
     gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(camera, {
@@ -63575,6 +63669,12 @@ mm.add("(max-width: 500px)", function () {
     });
     gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".inst", {
       opacity: 0
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(hs4.scale, {
+      x: 0,
+      y: 0,
+      z: 0,
+      ease: "back.in(1.4)"
     });
   }
   container.addEventListener('click', function (event) {
