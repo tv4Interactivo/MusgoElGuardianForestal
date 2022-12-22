@@ -13,7 +13,7 @@ __webpack_require__.r(__webpack_exports__);
 /* 2 */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "a243456866af5f423e81.hdr";
+module.exports = __webpack_require__.p + "5f1e37fa3f2edbee282e.hdr";
 
 /***/ }),
 /* 3 */
@@ -63249,11 +63249,6 @@ function zoom4() {
   });
 }
 
-// window.addEventListener('click', function(){
-//     console.log(camera.position)
-//     console.log(camera.rotation)
-// })
-
 //RAYCASTER
 
 var raycaster = new three__WEBPACK_IMPORTED_MODULE_1__.Raycaster();
@@ -63275,7 +63270,8 @@ container.addEventListener('click', function (event) {
   var found = raycaster.intersectObjects(hotspots);
   if (found.length > 0) {
     model = found[0].object;
-    console.log(model.name);
+    //console.log(model.name)
+
     if (model.name == null) {
       found.length == 0;
     }
@@ -63333,6 +63329,283 @@ bClose.onclick = function () {
     opacity: 1
   });
 };
+if (sizes.width < 500) {
+  camera.fov = 80;
+  camera.updateProjectionMatrix();
+}
+var mm = gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.matchMedia();
+mm.add("(min-width: 501px) and (max-width: 921px)", function () {
+  function zoom1_2() {
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(camera, {
+      zoom: 5,
+      duration: 3,
+      ease: "sine.out",
+      onUpdate: function onUpdate() {
+        camera.updateProjectionMatrix();
+      }
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(controls.target, {
+      duration: 1,
+      ease: "sine.out",
+      x: 0.2,
+      y: 0.2,
+      z: 0.32
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".cards1", {
+      opacity: 1,
+      display: "block"
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".button", {
+      opacity: 1
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".inst", {
+      opacity: 0
+    });
+  }
+  function zoom2_2() {
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(camera, {
+      zoom: 3,
+      duration: 3,
+      ease: "sine.out",
+      onUpdate: function onUpdate() {
+        camera.updateProjectionMatrix();
+      }
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(controls.target, {
+      duration: 1,
+      ease: "sine.out",
+      x: -0.63,
+      y: 0.5,
+      z: 0.12
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".cards2", {
+      opacity: 1,
+      display: "block"
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".button", {
+      opacity: 1
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".inst", {
+      opacity: 0
+    });
+  }
+  function zoom3_2() {
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(camera, {
+      zoom: 10,
+      duration: 3,
+      ease: "sine.out",
+      onUpdate: function onUpdate() {
+        camera.updateProjectionMatrix();
+      }
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(controls.target, {
+      duration: 1,
+      ease: "sine.out",
+      x: 0.78,
+      y: 0.30,
+      z: -0.3
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".cards3", {
+      opacity: 1,
+      display: "block"
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".button", {
+      opacity: 1
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".inst", {
+      opacity: 0
+    });
+  }
+  function zoom4_2() {
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(camera, {
+      zoom: 3,
+      duration: 3,
+      ease: "sine.out",
+      onUpdate: function onUpdate() {
+        camera.updateProjectionMatrix();
+      }
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(controls.target, {
+      duration: 1,
+      ease: "sine.out",
+      x: 1,
+      y: 1,
+      z: -1.95
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".cards4", {
+      opacity: 1,
+      display: "block"
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".button", {
+      opacity: 1
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".inst", {
+      opacity: 0
+    });
+  }
+  container.addEventListener('click', function (event) {
+    mouse.x = event.clientX / sizes.width * 2 - 1;
+    mouse.y = -(event.clientY / sizes.height * 2 - 1);
+    raycaster.setFromCamera(mouse, camera);
+    var found = raycaster.intersectObjects(hotspots);
+    if (found.length > 0) {
+      model = found[0].object;
+      //console.log(model.name)
+
+      if (model.name == null) {
+        found.length == 0;
+      }
+      if (model.name === "hot1") {
+        zoom1_2();
+      }
+      if (model.name === "hot2") {
+        zoom2_2();
+      }
+      if (model.name === "hot3") {
+        zoom3_2();
+      }
+      if (model.name === "hot4") {
+        zoom4_2();
+      }
+    }
+  });
+});
+mm.add("(max-width: 500px)", function () {
+  function zoom1_3() {
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(camera, {
+      zoom: 5,
+      duration: 3,
+      ease: "sine.out",
+      onUpdate: function onUpdate() {
+        camera.updateProjectionMatrix();
+      }
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(controls.target, {
+      duration: 1,
+      ease: "sine.out",
+      x: 0.2,
+      y: 0.2,
+      z: 0.32
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".cards1", {
+      opacity: 1,
+      display: "block"
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".button", {
+      opacity: 1
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".inst", {
+      opacity: 0
+    });
+  }
+  function zoom2_3() {
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(camera, {
+      zoom: 3,
+      duration: 3,
+      ease: "sine.out",
+      onUpdate: function onUpdate() {
+        camera.updateProjectionMatrix();
+      }
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(controls.target, {
+      duration: 1,
+      ease: "sine.out",
+      x: -0.63,
+      y: 0.5,
+      z: 0.12
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".cards2", {
+      opacity: 1,
+      display: "block"
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".button", {
+      opacity: 1
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".inst", {
+      opacity: 0
+    });
+  }
+  function zoom3_3() {
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(camera, {
+      zoom: 10,
+      duration: 3,
+      ease: "sine.out",
+      onUpdate: function onUpdate() {
+        camera.updateProjectionMatrix();
+      }
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(controls.target, {
+      duration: 1,
+      ease: "sine.out",
+      x: 0.78,
+      y: 0.30,
+      z: -0.3
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".cards3", {
+      opacity: 1,
+      display: "block"
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".button", {
+      opacity: 1
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".inst", {
+      opacity: 0
+    });
+  }
+  function zoom4_3() {
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(camera, {
+      zoom: 3,
+      duration: 3,
+      ease: "sine.out",
+      onUpdate: function onUpdate() {
+        camera.updateProjectionMatrix();
+      }
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(controls.target, {
+      duration: 1,
+      ease: "sine.out",
+      x: 1,
+      y: 1,
+      z: -1.95
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".cards4", {
+      opacity: 1,
+      display: "block"
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".button", {
+      opacity: 1
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.to(".inst", {
+      opacity: 0
+    });
+  }
+  container.addEventListener('click', function (event) {
+    mouse.x = event.clientX / sizes.width * 2 - 1;
+    mouse.y = -(event.clientY / sizes.height * 2 - 1);
+    raycaster.setFromCamera(mouse, camera);
+    var found = raycaster.intersectObjects(hotspots);
+    if (found.length > 0) {
+      model = found[0].object;
+      //console.log(model.name)
+
+      if (model.name == null) {
+        found.length == 0;
+      }
+      if (model.name === "hot1") {
+        zoom1_3();
+      }
+      if (model.name === "hot2") {
+        zoom2_3();
+      }
+      if (model.name === "hot3") {
+        zoom3_3();
+      }
+      if (model.name === "hot4") {
+        zoom4_3();
+      }
+    }
+  });
+});
 })();
 
 /******/ })()
