@@ -1,4 +1,4 @@
-# Musgo: el guardián forestal :herb::paintbrush:
+# Musgo: el guardián forestal :herb::fallen_leaf:
 
 ### Conoce su importancia medioambiental
 </br>
